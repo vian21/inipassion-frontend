@@ -15,7 +15,7 @@ const OnboardingCta = ({ orderId }: { orderId: string }) => {
           You can now complete setting up your store in the admin.
         </Text>
         <a
-          href={`http://localhost:7001/a/orders/${orderId}`}
+          href={`http://24.202.192.150:7001/a/orders/${orderId}`}
           onClick={resetOnboarding}
         >
           <Button className="w-full">Complete setup in admin</Button>

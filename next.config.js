@@ -14,7 +14,7 @@ module.exports = withStoreConfig({
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "localhost",
+        hostname: "24.202.192.150",
       },
       {
         protocol: "https",

@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://localhost:8000",
+  "baseUrl": "http://24.202.192.150:8000",
   "env": {
     "codeCoverage": {
       "url": "/api/__coverage__"
