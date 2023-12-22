@@ -1,3 +1,5 @@
+"use client"
+
 import { CheckoutProvider } from "@lib/context/checkout-context"
 import ChevronDown from "@modules/common/icons/chevron-down"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
@@ -21,16 +23,16 @@ const CheckoutTemplate = () => {
               <>
                 <ChevronDown className="rotate-90" size={16} />
                 <span className="mt-px hidden small:block txt-compact-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase">
-                  Back to shopping cart
+                  Retour au panier
                 </span>
-                <span className="mt-px block small:hidden">Back</span>
+                <span className="mt-px block small:hidden">Retour</span>
               </>
             </Link>
             <Link
               href="/"
               className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             >
-              Medusa Store
+              IniPassion
             </Link>
             <div className="flex-1 basis-0" />
           </nav>

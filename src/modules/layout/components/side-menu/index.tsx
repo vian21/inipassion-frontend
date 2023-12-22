@@ -6,11 +6,12 @@ import { Text, clx, useToggleState } from "@medusajs/ui"
 import CountrySelect from "../country-select"
 
 const SideMenuItems = {
-  Home: "/",
-  Store: "/store",
-  Search: "",
-  Account: "/account",
-  Cart: "/cart",
+  "Page d'accueil": "/",
+  Boutique: "/store",
+  Recherche: "",
+  Compte: "/account",
+  Chariot: "/cart",
+  Apropos: "/about",
 }
 
 const SideMenu = ({ searchModalOpen }: { searchModalOpen: () => void }) => {
@@ -95,8 +96,8 @@ const SideMenu = ({ searchModalOpen }: { searchModalOpen: () => void }) => {
                         />
                       </div>
                       <Text className="flex justify-between txt-compact-small">
-                        © {new Date().getFullYear()} Medusa Store. All rights
-                        reserved.
+                        © {new Date().getFullYear()} IniPassion. Tous les droits
+                        réservé.
                       </Text>
                     </div>
                   </div>

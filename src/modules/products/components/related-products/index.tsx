@@ -60,7 +60,7 @@ const RelatedProducts = ({ product }: RelatedProductsProps) => {
           Related products
         </span>
         <p className="text-2xl-regular text-gray-900 max-w-lg">
-          You might also want to check out these products.
+          Vous voudrez peut-être également consulter ces produits.
         </p>
       </div>
 
@@ -91,7 +91,7 @@ const RelatedProducts = ({ product }: RelatedProductsProps) => {
             onClick={() => fetchNextPage()}
             className="w-72"
           >
-            Load more
+            Plus
           </Button>
         </div>
       )}

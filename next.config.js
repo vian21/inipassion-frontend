@@ -11,10 +11,19 @@ module.exports = withStoreConfig({
   features: store.features,
   reactStrictMode: true,
   images: {
+    domains: [
+      process.env.NODE_ENV === "development"
+        ? "localhost"
+        : process.env.HOSTNAME,
+    ],
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "24.202.192.150",
+        hostname:
+          process.env.NODE_ENV === "development"
+            ? "localhost"
+            : process.env.HOSTNAME,
+        port: "8000",
       },
       {
         protocol: "https",

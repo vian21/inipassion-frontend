@@ -1,35 +1,26 @@
-import { Button, Heading } from "@medusajs/ui"
-import InteractiveLink from "@modules/common/components/interactive-link"
-import { Github } from "@medusajs/icons"
+"use client"
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react"
+
+// Import Swiper styles
+import "swiper/css"
 
 const Hero = () => {
   return (
     <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
-        <span>
-          <Heading
-            level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
-          >
-            Hello Fadel
-          </Heading>
-          <Heading
-            level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
-          >
-            Powered by Medusa and Next.js
-          </Heading>
-        </span>
-        <a
-          href="https://github.com/medusajs/nextjs-starter-medusa"
-          target="_blank"
-        >
-          <Button variant="secondary">
-            View on GitHub
-            <Github />
-          </Button>
-        </a>
-      </div>
+      <Swiper className="w-full h-full" slidesPerView={1}>
+        <SwiperSlide>
+          <img
+            className="w-full h-full object-contain"
+            src="/images/back.jpg"
+            alt=""
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img className="w-full h-full " src="/images/back2.jpg" alt="" />
+        </SwiperSlide>
+      </Swiper>
     </div>
   )
 }

@@ -17,12 +17,13 @@ const FooterNav = () => {
           <div>
             <Link
               href="/"
-              className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
+              className="m-3 txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             >
-              Medusa Store
+              IniPassion
             </Link>
+            <p className="text-small-regular m-3">Ottawa, Ontario, Canada</p>
           </div>
-          <div className="text-small-regular grid grid-cols-3 gap-x-10 md:gap-x-16">
+          <div className="text-small-regular grid grid-cols-4 gap-x-10 md:gap-x-16">
             {product_categories && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
@@ -102,38 +103,63 @@ const FooterNav = () => {
                 </ul>
               </div>
             )}
+
             <div className="flex flex-col gap-y-2">
-              <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
+              <span className="txt-small-plus txt-ui-fg-base">
+                Reseau Sociaux
+              </span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
                   <a
-                    href="https://github.com/medusajs"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
+                    href="https://www.instagram.com/inipassion/"
                   >
-                    GitHub
+                    Instragram
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-ui-fg-base"
+                    href="https://www.tiktok.com/@ini.paasion"
+                  >
+                    Tiktok
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://docs.medusajs.com"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-ui-fg-base"
+                    href="/faq"
                   >
-                    Documentation
+                    Facebook
                   </a>
                 </li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-y-2">
+              <span className="txt-small-plus txt-ui-fg-base">IniPassion</span>
+              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
-                  <a
-                    href="https://github.com/medusajs/nextjs-starter-medusa"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-ui-fg-base"
-                  >
-                    Source code
-                  </a>
+                  <Link href="/about" className="hover:text-ui-fg-base">
+                    Apropos
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/faq" className="hover:text-ui-fg-base">
+                    FAQ
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/policy" className="hover:text-ui-fg-base">
+                    Politique et confidentialité
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -141,7 +167,7 @@ const FooterNav = () => {
         </div>
         <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
           <Text className="txt-compact-small">
-            © {new Date().getFullYear()} Medusa Store. All rights reserved.
+            © {new Date().getFullYear()} IniPassion. Tous les droits réservé.
           </Text>
           <MedusaCTA />
         </div>

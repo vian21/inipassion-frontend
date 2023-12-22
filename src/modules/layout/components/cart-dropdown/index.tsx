@@ -24,7 +24,7 @@ const CartDropdown = () => {
           <Link
             className="hover:text-ui-fg-base"
             href="/cart"
-          >{`Cart (${totalItems})`}</Link>
+          >{`Chariot (${totalItems})`}</Link>
         </Popover.Button>
         <Transition
           show={state}
@@ -41,7 +41,7 @@ const CartDropdown = () => {
             className="hidden small:block absolute top-[calc(100%+1px)] right-0 bg-white border-x border-b border-gray-200 w-[382px] text-gray-900"
           >
             <div className="p-4 flex items-center justify-center">
-              <h3 className="text-large-semi">Cart</h3>
+              <h3 className="text-large-semi">Chariot</h3>
             </div>
             {cart && items?.length ? (
               <>
@@ -92,7 +92,7 @@ const CartDropdown = () => {
                                 onClick={() => deleteItem(item.id)}
                               >
                                 <Trash size={14} />
-                                <span>Remove</span>
+                                <span>Enlever</span>
                               </button>
                             </div>
                           </div>
@@ -127,12 +127,14 @@ const CartDropdown = () => {
                   <div className="bg-gray-900 text-small-regular flex items-center justify-center w-6 h-6 rounded-full text-white">
                     <span>0</span>
                   </div>
-                  <span>Your shopping bag is empty.</span>
+                  <span>Votre panier est vide.</span>
                   <div>
                     <Link href="/store">
                       <>
-                        <span className="sr-only">Go to all products page</span>
-                        <Button onClick={close}>Explore products</Button>
+                        <span className="sr-only">
+                          Aller à la page de tous les produits
+                        </span>
+                        <Button onClick={close}>Explorer les produits</Button>
                       </>
                     </Link>
                   </div>
