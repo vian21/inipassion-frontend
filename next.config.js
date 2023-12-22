@@ -1,6 +1,7 @@
 const { withStoreConfig } = require("./store-config")
 const store = require("./store.config.json")
 
+console.log("Store front starting ...")
 module.exports = withStoreConfig({
   experimental: {
     serverComponentsExternalPackages: [
@@ -12,9 +13,7 @@ module.exports = withStoreConfig({
   reactStrictMode: true,
   images: {
     domains: [
-      process.env.NODE_ENV === "development"
-        ? "localhost"
-        : process.env.HOSTNAME,
+      process.env.NODE_ENV === "development" ? "localhost" : process.env.HOST,
     ],
     remotePatterns: [
       {
@@ -22,8 +21,8 @@ module.exports = withStoreConfig({
         hostname:
           process.env.NODE_ENV === "development"
             ? "localhost"
-            : process.env.HOSTNAME,
-        port: "8000",
+            : process.env.HOST,
+        port: process.env.BACKEND_PORT,
       },
       {
         protocol: "https",
@@ -40,5 +39,9 @@ module.exports = withStoreConfig({
     ],
   },
 })
+
+console.log("NODE_ENV: ", process.env.NODE_ENV)
+console.log("HOST: ", process.env.HOST)
+console.log("Port: ", process.env.BACKEND_PORT)
 
 console.log("next.config.js", JSON.stringify(module.exports, null, 2))
