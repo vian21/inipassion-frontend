@@ -20,7 +20,7 @@ module.exports = withStoreConfig({
         protocol: "http",
         hostname:
           process.env.NODE_ENV === "development"
-            ? "localhost"
+            ? "24.202.192.150"
             : process.env.HOST,
         port: process.env.BACKEND_PORT,
       },

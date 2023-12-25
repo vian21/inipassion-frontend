@@ -34,8 +34,14 @@ const Nav = () => {
           <div className="flex items-center h-full">
             <Link
               href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              className="flex items-center txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
             >
+              <div className="w-10 h-10 mx-3">
+                <img
+                  className="w-full h-full rounded-full"
+                  src="/images/logo.jpg"
+                />
+              </div>
               IniPassion
             </Link>
           </div>
@@ -50,7 +56,7 @@ const Nav = () => {
                 />
               )}
               <Link className="hover:text-ui-fg-base" href="/account">
-                Account
+                Compte
               </Link>
             </div>
             <CartDropdown />

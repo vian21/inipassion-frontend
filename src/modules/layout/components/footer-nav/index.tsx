@@ -8,7 +8,7 @@ import MedusaCTA from "../medusa-cta"
 
 const FooterNav = () => {
   const { collections } = useCollections()
-  const { product_categories } = useProductCategories()
+  // const { product_categories } = useProductCategories()
 
   return (
     <div className="border-t border-ui-border-base w-screen">
@@ -21,10 +21,28 @@ const FooterNav = () => {
             >
               IniPassion
             </Link>
+
             <p className="text-small-regular m-3">Ottawa, Ontario, Canada</p>
+
+            <div className="text-small-regular m-3 wr">
+              <span className="font-medium">Email: </span>
+              <a
+                href="mailto:inipassion@gmail.com"
+                className="underline decoration-blue-300 decoration-2"
+              >
+                inipassion@gmail.com
+              </a>
+            </div>
+
+            <a
+              href="tel:613 314 1263"
+              className="text-small-regular m-3 underline decoration-blue-300 decoration-2"
+            >
+              +1 613 314 1263
+            </a>
           </div>
           <div className="text-small-regular grid grid-cols-4 gap-x-10 md:gap-x-16">
-            {product_categories && (
+            {/* {product_categories && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
                   Categories
@@ -76,11 +94,11 @@ const FooterNav = () => {
                   })}
                 </ul>
               </div>
-            )}
+            )} */}
             {collections && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
-                  Collections
+                  Categories
                 </span>
                 <ul
                   className={clsx(
