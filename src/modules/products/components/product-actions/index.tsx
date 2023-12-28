@@ -85,7 +85,7 @@ const ProductActionsInner: React.FC<ProductActionsProps> = ({ product }) => {
           ? "Out of stock"
           : !variant
           ? "Select variant"
-          : "Add to cart"}
+          : "Ajouter au panier"}
       </Button>
     </div>
   )

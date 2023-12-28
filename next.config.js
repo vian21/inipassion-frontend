@@ -13,35 +13,30 @@ module.exports = withStoreConfig({
   reactStrictMode: true,
   images: {
     domains: [
-      process.env.NODE_ENV === "development" ? "localhost" : process.env.HOST,
+      process.env.NODE_ENV === "development"
+        ? "localhost"
+        : process.env.S3_BUCKET,
     ],
     remotePatterns: [
-      {
-        protocol: "http",
-        hostname:
-          process.env.NODE_ENV === "development"
-            ? "24.202.192.150"
-            : process.env.HOST,
-        port: process.env.BACKEND_PORT,
-      },
-      {
-        protocol: "https",
-        hostname: "medusa-public-images.s3.eu-west-1.amazonaws.com",
-      },
+      // {
+      //   protocol: "http",
+      //   hostname:
+      //     process.env.NODE_ENV === "development"
+      //       ? "localhost"
+      //       : process.env.HOST,
+      //   port: process.env.BACKEND_PORT,
+      // },
       {
         protocol: "https",
-        hostname: "medusa-server-testing.s3.amazonaws.com",
-      },
-      {
-        protocol: "https",
-        hostname: "medusa-server-testing.s3.us-east-1.amazonaws.com",
+        hostname: process.env.S3_BUCKET,
       },
     ],
   },
 })
 
-console.log("NODE_ENV: ", process.env.NODE_ENV)
-console.log("HOST: ", process.env.HOST)
-console.log("Port: ", process.env.BACKEND_PORT)
-
+if (process.env.NODE_ENV === "development") {
+  console.log("NODE_ENV: ", process.env.NODE_ENV)
+  console.log("HOST: ", process.env.HOST)
+  console.log("Port: ", process.env.BACKEND_PORT)
+}
 console.log("next.config.js", JSON.stringify(module.exports, null, 2))

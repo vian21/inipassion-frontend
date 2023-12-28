@@ -3,13 +3,20 @@
 import { Swiper, SwiperSlide } from "swiper/react"
 import Image from "next/image"
 
+import { Autoplay } from "swiper/modules"
+
 // Import Swiper styles
 import "swiper/css"
 
 const Hero = () => {
   return (
     <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      <Swiper className="w-full h-full" slidesPerView={1}>
+      <Swiper
+        className="w-full h-full bg-fixed "
+        slidesPerView={1}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        modules={[Autoplay]}
+      >
         <SwiperSlide>
           <Image
             className="object-cover"
